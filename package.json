@@ -1,0 +1,29 @@
+{
+  "author": "Alexander Popov",
+  "name": "read-books",
+  "description": "Static site reading book list",
+  "version": "0.1.0",
+  "license": "ISC",
+  "dependencies": {
+    "bulma": "^0.9.2",
+    "ejs": "3.1.6",
+    "less": "^4.1.1",
+    "normalize.css": "^8.0.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/ejs ./templates/main.ejs -f books.json -o ./public/index.html",
+    "start": "python -m http.server --directory=./public/ 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iiiypuk/books.git"
+  },
+  "keywords": [
+    "books"
+  ],
+  "bugs": {
+    "url": "https://github.com/iiiypuk/books/issues"
+  },
+  "homepage": "https://github.com/iiiypuk/books#readme"
+}

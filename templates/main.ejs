@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="<%=lang %>">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title><%=title %></title>
+   	<!-- <link rel="stylesheet" href="_media/css/normalize.css" /> -->
+   	<link rel="stylesheet" href="_media/css/bulma.min.css" />
+</head>
+<body>
+	<section class="hero is-info is-small">
+		<div class="hero-body">
+			<p class="title">Primary hero</p>
+			<p class="subtitle">Primary subtitle</p>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="container">
+			<div class="tabs is-centered">
+				<ul>
+				<li class="is-active"><a>Прочитанные</a></li>
+				<li><a>Хочу прочитать</a></li>
+				<li><a>Брошенные</a></li>
+				</ul>
+			</div>
+
+			<div class="columns">
+				<div class="column">
+					<% books['reads'].forEach( book => { %>
+					<div class="box">
+						<div class="columns">
+						<div class="column is-narrow">
+							<img style="height: 150px" src="<%=book['img'] %>">
+						</div>
+						<div class="column">
+							<p>
+								<b>Книга:</b>
+								<%=book['name'] %>
+							</p>
+							<p>
+								<b>Автор:</b><% book['author'].forEach( author => { %>
+								<%=author %> <% }) %>
+							</p>
+							<p>
+								<b>Год издания:</b>
+								<%=book['publishing'] %>
+							</p>
+							<p>
+								<b>ISBN:</b>
+								<%=book['ISBN'] %>
+							</p>
+							<p>
+								<b>Страниц:</b>
+								<%=book['pages'] %>
+							</p> 
+						</div>
+						</div>
+					</div>
+				  	<% }) %>
+				</div>
+			</div>
+
+			<nav class="pagination" role="navigation" aria-label="pagination">
+				<a class="pagination-previous" title="This is the first page" disabled>Previous</a>
+				<a class="pagination-next">Next page</a>
+				<ul class="pagination-list">
+				<li>
+				<a class="pagination-link is-current" aria-label="Page 1" aria-current="page">1</a>
+				</li>
+				<li>
+				<a class="pagination-link" aria-label="Goto page 2">2</a>
+				</li>
+				<li>
+				<a class="pagination-link" aria-label="Goto page 3">3</a>
+				</li>
+				</ul>
+			</nav>
+
+			<div class="block">
+			I'm in a box.
+			</div>
+		</div>
+	</section>
+</body>
+</html>

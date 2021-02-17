@@ -1,0 +1,32 @@
+{
+	"reads":
+	[
+		{
+			"img": "_media/covers/image.png",
+			"name": "",
+			"author": [""],
+			"publisher":
+			{ "name": "", "url": ""},
+			"publishing": 0,
+			"ISBN": "",
+			"pages": 0,
+			"edition:": 0,
+			"price": 0,
+			"period": { "start": 0, "end": 0 }
+		}
+	],
+
+	"dropped":
+	[
+		{
+
+		}
+	],
+
+	"want":
+	[
+		{
+
+		}
+	]
+}
